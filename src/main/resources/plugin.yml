@@ -1,0 +1,17 @@
+name: Sell
+version: '${project.version}'
+main: com.contest.sell.SellPlugin
+api-version: '1.21'
+depend: [Vault]
+description: DonutSMP-style /sell menu.
+commands:
+  sell:
+    description: Open the sell menu.
+    usage: /sell [worth]
+    permission: sell.use
+permissions:
+  sell.use:
+    default: true
+  sell.admin:
+    description: Reload prices with /sell reload.
+    default: op

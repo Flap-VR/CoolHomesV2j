@@ -1,0 +1,1008 @@
+# ====================================================================
+# SELL
+# EVERY item in Minecraft can be sold. Items listed under "prices" use
+# that price; everything else gets an automatic price (see default-price).
+# Enchanted, renamed and armor-trimmed items sell too.
+# Prices are per ONE item. After editing, run /sell reload.
+# Check any item with /sell worth while holding it.
+# ====================================================================
+
+currency-symbol: "$"
+
+# Tools/armor sell for less the more damaged they are.
+scale-by-durability: true
+
+# Price used for any item that isn't in "prices" and doesn't match an
+# automatic category (spawn eggs, discs, wool, wood, tools, etc.).
+default-price: 2
+
+# Can items with a custom name or lore be sold? (true = sold at normal value)
+allow-renamed-items: true
+
+# Items nobody can sell. Empty = literally everything is sellable.
+# Example: blacklist: [BEDROCK, BARRIER, COMMAND_BLOCK]
+blacklist: []
+
+# Each enchantment adds (value x level) to an item's price.
+# Anything not listed here uses default-enchant-value per level.
+default-enchant-value: 300
+enchant-values:
+  mending: 5000
+  unbreaking: 800
+  protection: 800
+  fire_protection: 300
+  blast_protection: 300
+  projectile_protection: 300
+  feather_falling: 400
+  thorns: 400
+  respiration: 400
+  aqua_affinity: 1200
+  depth_strider: 400
+  frost_walker: 600
+  soul_speed: 800
+  swift_sneak: 1500
+  binding_curse: 10
+  vanishing_curse: 10
+  sharpness: 600
+  smite: 250
+  bane_of_arthropods: 250
+  knockback: 300
+  fire_aspect: 400
+  looting: 800
+  sweeping_edge: 400
+  efficiency: 600
+  silk_touch: 2500
+  fortune: 1200
+  power: 600
+  punch: 300
+  flame: 1000
+  infinity: 3000
+  luck_of_the_sea: 300
+  lure: 300
+  loyalty: 500
+  impaling: 300
+  riptide: 500
+  channeling: 1000
+  multishot: 1000
+  piercing: 300
+  quick_charge: 400
+  density: 800
+  breach: 800
+  wind_burst: 1200
+
+messages:
+  sold: "&6&lSell &r>> &aYou sold your items for &2{amount}&a!"
+  nothing: "&6&lSell &r>> &cThere is nothing to sell!"
+  unsellable: "&6&lSell &r>> &cYou can't sell &f{item} &c({reason})"
+  no-economy: "&6&lSell &r>> &cNo economy found. Install Vault + an economy plugin."
+
+# --------------------------------------------------------------------
+# Base prices (an item's price before enchantments / trims are added)
+# --------------------------------------------------------------------
+prices:
+  # Ores & minerals
+  COAL: 5
+  CHARCOAL: 4
+  RAW_IRON: 15
+  IRON_INGOT: 20
+  IRON_NUGGET: 2
+  RAW_GOLD: 22
+  GOLD_INGOT: 30
+  GOLD_NUGGET: 3
+  RAW_COPPER: 5
+  COPPER_INGOT: 8
+  REDSTONE: 3
+  LAPIS_LAZULI: 5
+  QUARTZ: 4
+  AMETHYST_SHARD: 6
+  DIAMOND: 200
+  EMERALD: 100
+  NETHERITE_SCRAP: 700
+  NETHERITE_INGOT: 3000
+  ANCIENT_DEBRIS: 1500
+  COAL_ORE: 6
+  IRON_ORE: 16
+  GOLD_ORE: 23
+  COPPER_ORE: 6
+  REDSTONE_ORE: 4
+  LAPIS_ORE: 6
+  DIAMOND_ORE: 210
+  EMERALD_ORE: 110
+  DEEPSLATE_COAL_ORE: 6
+  DEEPSLATE_IRON_ORE: 16
+  DEEPSLATE_GOLD_ORE: 23
+  DEEPSLATE_COPPER_ORE: 6
+  DEEPSLATE_REDSTONE_ORE: 4
+  DEEPSLATE_LAPIS_ORE: 6
+  DEEPSLATE_DIAMOND_ORE: 210
+  DEEPSLATE_EMERALD_ORE: 110
+  NETHER_GOLD_ORE: 8
+  NETHER_QUARTZ_ORE: 5
+  COAL_BLOCK: 45
+  IRON_BLOCK: 180
+  GOLD_BLOCK: 270
+  COPPER_BLOCK: 72
+  REDSTONE_BLOCK: 27
+  LAPIS_BLOCK: 45
+  QUARTZ_BLOCK: 16
+  AMETHYST_BLOCK: 24
+  DIAMOND_BLOCK: 1800
+  EMERALD_BLOCK: 900
+  NETHERITE_BLOCK: 27000
+  RAW_IRON_BLOCK: 135
+  RAW_GOLD_BLOCK: 198
+  RAW_COPPER_BLOCK: 45
+  # Stone, dirt & building blocks
+  STONE: 1
+  COBBLESTONE: 0.5
+  DEEPSLATE: 0.8
+  COBBLED_DEEPSLATE: 0.5
+  DIRT: 0.2
+  COARSE_DIRT: 0.3
+  GRASS_BLOCK: 1
+  PODZOL: 1
+  MYCELIUM: 5
+  MOSS_BLOCK: 3
+  SAND: 1
+  RED_SAND: 1
+  GRAVEL: 1
+  CLAY_BALL: 2
+  CLAY: 8
+  BRICK: 3
+  BRICKS: 12
+  TERRACOTTA: 3
+  ANDESITE: 1
+  DIORITE: 1
+  GRANITE: 1
+  TUFF: 0.5
+  CALCITE: 2
+  DRIPSTONE_BLOCK: 2
+  POINTED_DRIPSTONE: 1
+  BASALT: 1
+  SMOOTH_BASALT: 1
+  BLACKSTONE: 1
+  MOSSY_COBBLESTONE: 2
+  SANDSTONE: 4
+  RED_SANDSTONE: 4
+  NETHERRACK: 0.2
+  SOUL_SAND: 2
+  SOUL_SOIL: 1
+  MAGMA_BLOCK: 5
+  ICE: 2
+  PACKED_ICE: 4
+  BLUE_ICE: 20
+  SNOW_BLOCK: 1
+  SNOWBALL: 0.3
+  GLASS: 2
+  OBSIDIAN: 15
+  CRYING_OBSIDIAN: 25
+  END_STONE: 2
+  PURPUR_BLOCK: 4
+  GLOWSTONE: 12
+  GLOWSTONE_DUST: 3
+  SEA_LANTERN: 20
+  PRISMARINE: 8
+  PRISMARINE_SHARD: 6
+  PRISMARINE_CRYSTALS: 6
+  NETHER_BRICK: 3
+  NETHER_BRICKS: 12
+  SPONGE: 100
+  WET_SPONGE: 100
+  BONE_BLOCK: 27
+  SLIME_BLOCK: 72
+  HONEY_BLOCK: 25
+  SCULK: 10
+  SCULK_CATALYST: 500
+  SCULK_SENSOR: 150
+  COBWEB: 15
+  # Wood
+  OAK_LOG: 3
+  OAK_PLANKS: 0.8
+  OAK_SAPLING: 1
+  SPRUCE_LOG: 3
+  SPRUCE_PLANKS: 0.8
+  SPRUCE_SAPLING: 1
+  BIRCH_LOG: 3
+  BIRCH_PLANKS: 0.8
+  BIRCH_SAPLING: 1
+  JUNGLE_LOG: 3
+  JUNGLE_PLANKS: 0.8
+  JUNGLE_SAPLING: 1
+  ACACIA_LOG: 3
+  ACACIA_PLANKS: 0.8
+  ACACIA_SAPLING: 1
+  DARK_OAK_LOG: 3
+  DARK_OAK_PLANKS: 0.8
+  DARK_OAK_SAPLING: 1
+  CHERRY_LOG: 3
+  CHERRY_PLANKS: 0.8
+  CHERRY_SAPLING: 1
+  MANGROVE_LOG: 3
+  MANGROVE_PLANKS: 0.8
+  MANGROVE_SAPLING: 1
+  PALE_OAK_LOG: 3
+  PALE_OAK_PLANKS: 0.8
+  PALE_OAK_SAPLING: 1
+  CRIMSON_STEM: 3
+  WARPED_STEM: 3
+  BAMBOO_BLOCK: 4
+  STICK: 0.3
+  NETHER_WART_BLOCK: 3
+  WARPED_WART_BLOCK: 3
+  SHROOMLIGHT: 6
+  # Farming & food
+  WHEAT: 3
+  WHEAT_SEEDS: 0.5
+  CARROT: 3
+  POTATO: 3
+  BAKED_POTATO: 4
+  BEETROOT: 3
+  BEETROOT_SEEDS: 0.5
+  MELON_SLICE: 1
+  MELON: 9
+  MELON_SEEDS: 0.5
+  PUMPKIN: 5
+  PUMPKIN_SEEDS: 0.5
+  SUGAR_CANE: 2
+  SUGAR: 2
+  CACTUS: 2
+  NETHER_WART: 4
+  KELP: 1
+  DRIED_KELP: 1
+  DRIED_KELP_BLOCK: 9
+  BAMBOO: 1
+  SWEET_BERRIES: 2
+  GLOW_BERRIES: 3
+  COCOA_BEANS: 3
+  HAY_BLOCK: 27
+  APPLE: 4
+  GOLDEN_APPLE: 300
+  ENCHANTED_GOLDEN_APPLE: 20000
+  GOLDEN_CARROT: 40
+  BREAD: 8
+  COOKIE: 2
+  PUMPKIN_PIE: 10
+  HONEY_BOTTLE: 10
+  HONEYCOMB: 6
+  EGG: 1
+  COOKED_BEEF: 5
+  COOKED_PORKCHOP: 5
+  COOKED_CHICKEN: 5
+  COOKED_MUTTON: 5
+  COOKED_COD: 4
+  COOKED_SALMON: 4
+  COOKED_RABBIT: 5
+  RABBIT: 3
+  RABBIT_HIDE: 2
+  RABBIT_FOOT: 20
+  POISONOUS_POTATO: 1
+  SEA_PICKLE: 4
+  LILY_PAD: 2
+  VINE: 1
+  CHORUS_FRUIT: 4
+  POPPED_CHORUS_FRUIT: 5
+  CHORUS_FLOWER: 10
+  SPORE_BLOSSOM: 20
+  BIG_DRIPLEAF: 3
+  AZALEA: 5
+  DANDELION: 1
+  POPPY: 1
+  BLUE_ORCHID: 1
+  ALLIUM: 1
+  AZURE_BLUET: 1
+  CORNFLOWER: 1
+  LILY_OF_THE_VALLEY: 1
+  SUNFLOWER: 1
+  LILAC: 1
+  ROSE_BUSH: 1
+  PEONY: 1
+  TORCHFLOWER: 15
+  PITCHER_PLANT: 15
+  WITHER_ROSE: 200
+  # Mob drops
+  BONE: 3
+  BONE_MEAL: 1
+  ROTTEN_FLESH: 1
+  STRING: 3
+  GUNPOWDER: 8
+  SPIDER_EYE: 4
+  FERMENTED_SPIDER_EYE: 8
+  ENDER_PEARL: 30
+  ENDER_EYE: 60
+  BLAZE_ROD: 25
+  BLAZE_POWDER: 12
+  GHAST_TEAR: 50
+  SLIME_BALL: 8
+  MAGMA_CREAM: 12
+  LEATHER: 4
+  FEATHER: 2
+  ARROW: 1
+  BEEF: 3
+  PORKCHOP: 3
+  CHICKEN: 3
+  MUTTON: 3
+  COD: 3
+  SALMON: 3
+  TROPICAL_FISH: 4
+  PUFFERFISH: 6
+  INK_SAC: 3
+  GLOW_INK_SAC: 8
+  PHANTOM_MEMBRANE: 20
+  SHULKER_SHELL: 500
+  NETHER_STAR: 5000
+  WITHER_SKELETON_SKULL: 2500
+  SKELETON_SKULL: 200
+  ZOMBIE_HEAD: 200
+  CREEPER_HEAD: 200
+  PIGLIN_HEAD: 200
+  DRAGON_HEAD: 5000
+  TURTLE_SCUTE: 25
+  ARMADILLO_SCUTE: 15
+  NAUTILUS_SHELL: 100
+  HEART_OF_THE_SEA: 3000
+  ECHO_SHARD: 500
+  TOTEM_OF_UNDYING: 5000
+  BREEZE_ROD: 30
+  WIND_CHARGE: 3
+  EXPERIENCE_BOTTLE: 40
+  PAPER: 2
+  BOOK: 10
+  DRAGON_BREATH: 300
+  GLISTERING_MELON_SLICE: 40
+  # Rare / endgame items
+  ELYTRA: 8000
+  BEACON: 12000
+  CONDUIT: 15000
+  DRAGON_EGG: 100000
+  HEAVY_CORE: 8000
+  MACE: 10000
+  TRIDENT: 2000
+  BOW: 10
+  CROSSBOW: 20
+  SHIELD: 15
+  FISHING_ROD: 8
+  SADDLE: 150
+  NAME_TAG: 150
+  ENCHANTING_TABLE: 450
+  ANVIL: 200
+  END_CRYSTAL: 400
+  RESPAWN_ANCHOR: 300
+  LODESTONE: 3200
+  # Tools & armor (plain, unenchanted; price drops with durability)
+  IRON_SWORD: 40
+  IRON_PICKAXE: 60
+  IRON_AXE: 60
+  IRON_SHOVEL: 20
+  IRON_HOE: 40
+  IRON_HELMET: 100
+  IRON_CHESTPLATE: 160
+  IRON_LEGGINGS: 140
+  IRON_BOOTS: 80
+  GOLDEN_SWORD: 60
+  GOLDEN_PICKAXE: 90
+  GOLDEN_AXE: 90
+  GOLDEN_SHOVEL: 30
+  GOLDEN_HOE: 60
+  GOLDEN_HELMET: 150
+  GOLDEN_CHESTPLATE: 240
+  GOLDEN_LEGGINGS: 210
+  GOLDEN_BOOTS: 120
+  DIAMOND_SWORD: 400
+  DIAMOND_PICKAXE: 600
+  DIAMOND_AXE: 600
+  DIAMOND_SHOVEL: 200
+  DIAMOND_HOE: 400
+  DIAMOND_HELMET: 1000
+  DIAMOND_CHESTPLATE: 1600
+  DIAMOND_LEGGINGS: 1400
+  DIAMOND_BOOTS: 800
+  NETHERITE_SWORD: 3400
+  NETHERITE_PICKAXE: 3600
+  NETHERITE_AXE: 3600
+  NETHERITE_SHOVEL: 3200
+  NETHERITE_HOE: 3400
+  NETHERITE_HELMET: 4000
+  NETHERITE_CHESTPLATE: 4600
+  NETHERITE_LEGGINGS: 4400
+  NETHERITE_BOOTS: 3800
+
+  # Redstone & utility
+  TNT: 40
+  PISTON: 20
+  STICKY_PISTON: 40
+  OBSERVER: 25
+  HOPPER: 60
+  DISPENSER: 30
+  DROPPER: 25
+  REPEATER: 12
+  COMPARATOR: 30
+  LEVER: 2
+  TRIPWIRE_HOOK: 8
+  RAIL: 10
+  POWERED_RAIL: 50
+  DETECTOR_RAIL: 20
+  ACTIVATOR_RAIL: 20
+  DAYLIGHT_DETECTOR: 40
+  TARGET: 25
+  LIGHTNING_ROD: 25
+  NOTE_BLOCK: 15
+  JUKEBOX: 210
+  CRAFTER: 100
+  TORCH: 0.5
+  SOUL_TORCH: 1
+  LANTERN: 8
+  SOUL_LANTERN: 9
+  CAMPFIRE: 12
+  SOUL_CAMPFIRE: 13
+  FURNACE: 4
+  BLAST_FURNACE: 120
+  SMOKER: 10
+  CRAFTING_TABLE: 3
+  CHEST: 6
+  TRAPPED_CHEST: 10
+  BARREL: 5
+  ENDER_CHEST: 150
+  BREWING_STAND: 40
+  CAULDRON: 140
+  GRINDSTONE: 10
+  STONECUTTER: 25
+  LOOM: 8
+  CARTOGRAPHY_TABLE: 8
+  FLETCHING_TABLE: 6
+  SMITHING_TABLE: 50
+  LECTERN: 12
+  BOOKSHELF: 40
+  COMPOSTER: 8
+  SCAFFOLDING: 1
+  LADDER: 0.5
+  BELL: 150
+  SHEARS: 40
+  FLINT_AND_STEEL: 22
+  FLINT: 1
+  COMPASS: 30
+  RECOVERY_COMPASS: 2500
+  CLOCK: 30
+  MAP: 24
+  SPYGLASS: 20
+  LEAD: 8
+  BRUSH: 10
+  GLASS_BOTTLE: 2
+  BOWL: 1
+  MILK_BUCKET: 70
+  WATER_BUCKET: 62
+  LAVA_BUCKET: 80
+  WRITABLE_BOOK: 20
+  # Misc drops & loot
+  TRIAL_KEY: 150
+  OMINOUS_TRIAL_KEY: 400
+  OMINOUS_BOTTLE: 300
+  GOAT_HORN: 250
+  DISC_FRAGMENT_5: 300
+  FIREWORK_ROCKET: 6
+  FIREWORK_STAR: 6
+  FIRE_CHARGE: 8
+  SNIFFER_EGG: 500
+  TURTLE_EGG: 200
+  FROGSPAWN: 60
+  OCHRE_FROGLIGHT: 60
+  VERDANT_FROGLIGHT: 60
+  PEARLESCENT_FROGLIGHT: 60
+  ENCHANTED_BOOK: 10
+  WRITTEN_BOOK: 12
+  FILLED_MAP: 24
+  CARROT_ON_A_STICK: 15
+  WARPED_FUNGUS_ON_A_STICK: 18
+  IRON_HORSE_ARMOR: 100
+  GOLDEN_HORSE_ARMOR: 150
+  DIAMOND_HORSE_ARMOR: 1000
+  LEATHER_HORSE_ARMOR: 40
+  WOLF_ARMOR: 120
+
+# --------------------------------------------------------------------
+# Special items: enchantments and armor trims
+#   materials:    exact names, or wildcards (NETHERITE_* / *_HELMET)
+#   enchants:     minimum levels required (use minecraft names, lowercase)
+#   trim-pattern / trim-material: optional, lowercase (silence, netherite...)
+#   price:        what ONE item sells for
+# Rules are PREMIUMS: if an item matches a rule, it sells for whichever is
+# higher - the rule's price or its normal (base + enchantment) value.
+# Items matching no rule still sell using the enchantment values above.
+# --------------------------------------------------------------------
+special-items:
+  # ---- Armor ----
+  netherite_helmet_god:
+    materials: [NETHERITE_HELMET]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+      respiration: 3
+      aqua_affinity: 1
+    price: 25000
+  netherite_chestplate_god:
+    materials: [NETHERITE_CHESTPLATE]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+    price: 28000
+  netherite_leggings_god:
+    materials: [NETHERITE_LEGGINGS]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+      swift_sneak: 3
+    price: 35000
+  netherite_boots_god:
+    materials: [NETHERITE_BOOTS]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+      feather_falling: 4
+      depth_strider: 3
+    price: 26000
+  netherite_armor_prot4:
+    materials: [NETHERITE_*]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+    price: 20000
+  netherite_armor_prot3:
+    materials: [NETHERITE_*]
+    enchants:
+      protection: 3
+      unbreaking: 3
+    price: 9000
+  diamond_armor_prot4:
+    materials: [DIAMOND_*]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+    price: 6000
+  diamond_armor_prot3:
+    materials: [DIAMOND_*]
+    enchants:
+      protection: 3
+      unbreaking: 3
+    price: 2500
+  iron_armor_prot4:
+    materials: [IRON_*]
+    enchants:
+      protection: 4
+      unbreaking: 3
+      mending: 1
+    price: 800
+  # ---- Armor with a specific trim ----
+  silence_netherite_helmet:
+    materials: [NETHERITE_HELMET]
+    trim-pattern: silence
+    trim-material: netherite
+    price: 40000
+  silence_trim_netherite_armor:
+    materials: [NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS]
+    trim-pattern: silence
+    price: 30000
+  # ---- Weapons ----
+  netherite_sword_god:
+    materials: [NETHERITE_SWORD]
+    enchants:
+      sharpness: 5
+      unbreaking: 3
+      mending: 1
+      looting: 3
+      fire_aspect: 2
+      sweeping_edge: 3
+    price: 25000
+  netherite_sword_sharp5:
+    materials: [NETHERITE_SWORD]
+    enchants:
+      sharpness: 5
+      unbreaking: 3
+      mending: 1
+    price: 12000
+  diamond_sword_sharp5:
+    materials: [DIAMOND_SWORD]
+    enchants:
+      sharpness: 5
+      unbreaking: 3
+      mending: 1
+    price: 3500
+  netherite_axe_god:
+    materials: [NETHERITE_AXE]
+    enchants:
+      sharpness: 5
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+    price: 22000
+  diamond_axe_god:
+    materials: [DIAMOND_AXE]
+    enchants:
+      sharpness: 5
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+    price: 3800
+  bow_god:
+    materials: [BOW]
+    enchants:
+      power: 5
+      infinity: 1
+      unbreaking: 3
+      mending: 1
+      flame: 1
+      punch: 2
+    price: 5000
+  crossbow_multishot:
+    materials: [CROSSBOW]
+    enchants:
+      quick_charge: 3
+      multishot: 1
+      unbreaking: 3
+      mending: 1
+    price: 3000
+  crossbow_piercing:
+    materials: [CROSSBOW]
+    enchants:
+      quick_charge: 3
+      piercing: 4
+      unbreaking: 3
+      mending: 1
+    price: 3000
+  trident_loyalty:
+    materials: [TRIDENT]
+    enchants:
+      loyalty: 3
+      impaling: 5
+      unbreaking: 3
+      mending: 1
+    price: 12000
+  trident_riptide:
+    materials: [TRIDENT]
+    enchants:
+      riptide: 3
+      impaling: 5
+      unbreaking: 3
+      mending: 1
+    price: 12000
+  mace_density:
+    materials: [MACE]
+    enchants:
+      density: 5
+      unbreaking: 3
+      mending: 1
+    price: 20000
+  mace_breach:
+    materials: [MACE]
+    enchants:
+      breach: 4
+      unbreaking: 3
+      mending: 1
+    price: 20000
+  mace_wind_burst:
+    materials: [MACE]
+    enchants:
+      wind_burst: 3
+      unbreaking: 3
+      mending: 1
+    price: 20000
+  # ---- Tools ----
+  netherite_pickaxe_fortune:
+    materials: [NETHERITE_PICKAXE]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+      fortune: 3
+    price: 24000
+  netherite_pickaxe_silk:
+    materials: [NETHERITE_PICKAXE]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+      silk_touch: 1
+    price: 20000
+  netherite_shovel_god:
+    materials: [NETHERITE_SHOVEL]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+    price: 12000
+  netherite_hoe_god:
+    materials: [NETHERITE_HOE]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+      fortune: 3
+    price: 10000
+  diamond_pickaxe_fortune:
+    materials: [DIAMOND_PICKAXE]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+      fortune: 3
+    price: 4000
+  diamond_pickaxe_silk:
+    materials: [DIAMOND_PICKAXE]
+    enchants:
+      efficiency: 5
+      unbreaking: 3
+      mending: 1
+      silk_touch: 1
+    price: 3600
+  fishing_rod_god:
+    materials: [FISHING_ROD]
+    enchants:
+      luck_of_the_sea: 3
+      lure: 3
+      unbreaking: 3
+      mending: 1
+    price: 2000
+  elytra_god:
+    materials: [ELYTRA]
+    enchants:
+      unbreaking: 3
+      mending: 1
+    price: 20000
+  shield_god:
+    materials: [SHIELD]
+    enchants:
+      unbreaking: 3
+      mending: 1
+    price: 1200
+  # ---- Enchanted books ----
+  book_mending:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      mending: 1
+    price: 8000
+  book_unbreaking:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      unbreaking: 3
+    price: 3000
+  book_protection:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      protection: 4
+    price: 3000
+  book_sharpness:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      sharpness: 5
+    price: 3000
+  book_efficiency:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      efficiency: 5
+    price: 3000
+  book_fortune:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      fortune: 3
+    price: 3500
+  book_looting:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      looting: 3
+    price: 2500
+  book_silk_touch:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      silk_touch: 1
+    price: 3000
+  book_feather_falling:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      feather_falling: 4
+    price: 1500
+  book_thorns:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      thorns: 3
+    price: 1500
+  book_swift_sneak:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      swift_sneak: 3
+    price: 5000
+  book_soul_speed:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      soul_speed: 3
+    price: 2500
+  book_depth_strider:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      depth_strider: 3
+    price: 1500
+  book_power:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      power: 5
+    price: 2500
+  book_infinity:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      infinity: 1
+    price: 3000
+  book_frost_walker:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      frost_walker: 2
+    price: 1500
+  book_fire_protection:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      fire_protection: 4
+    price: 1200
+  book_blast_protection:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      blast_protection: 4
+    price: 1200
+  book_projectile_protection:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      projectile_protection: 4
+    price: 1200
+  book_respiration:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      respiration: 3
+    price: 1500
+  book_aqua_affinity:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      aqua_affinity: 1
+    price: 1200
+  book_sweeping_edge:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      sweeping_edge: 3
+    price: 1500
+  book_knockback:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      knockback: 2
+    price: 1200
+  book_fire_aspect:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      fire_aspect: 2
+    price: 1200
+  book_smite:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      smite: 5
+    price: 1200
+  book_bane_of_arthropods:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      bane_of_arthropods: 5
+    price: 1200
+  book_lure:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      lure: 3
+    price: 1000
+  book_luck_of_the_sea:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      luck_of_the_sea: 3
+    price: 1000
+  book_loyalty:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      loyalty: 3
+    price: 1500
+  book_impaling:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      impaling: 5
+    price: 1500
+  book_riptide:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      riptide: 3
+    price: 1500
+  book_channeling:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      channeling: 1
+    price: 1500
+  book_multishot:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      multishot: 1
+    price: 1500
+  book_piercing:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      piercing: 4
+    price: 1500
+  book_quick_charge:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      quick_charge: 3
+    price: 1500
+  book_density:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      density: 5
+    price: 5000
+  book_breach:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      breach: 4
+    price: 5000
+  book_wind_burst:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      wind_burst: 3
+    price: 5000
+  book_punch:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      punch: 2
+    price: 1200
+  book_flame:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      flame: 1
+    price: 1200
+  book_binding_curse:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      binding_curse: 1
+    price: 100
+  book_vanishing_curse:
+    materials: [ENCHANTED_BOOK]
+    enchants:
+      vanishing_curse: 1
+    price: 100
+
+# --------------------------------------------------------------------
+# Armor trim bonuses: EXTRA money added on top of what the armor already
+# sells for. Pattern bonus + material bonus are added together.
+# --------------------------------------------------------------------
+trim-bonuses:
+  patterns:
+    silence: 8000
+    vex: 3000
+    ward: 2500
+    spire: 2000
+    wayfinder: 1500
+    raiser: 1500
+    shaper: 1500
+    host: 1500
+    snout: 1000
+    rib: 1000
+    eye: 1000
+    tide: 800
+    dune: 600
+    coast: 600
+    wild: 600
+    sentry: 600
+    flow: 1500
+    bolt: 1500
+  materials:
+    netherite: 1000
+    diamond: 600
+    emerald: 500
+    gold: 300
+    amethyst: 200
+    redstone: 150
+    lapis: 150
+    quartz: 100
+    iron: 100
+    copper: 100
+    resin: 150
