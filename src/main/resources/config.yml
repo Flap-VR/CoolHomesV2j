@@ -71,10 +71,10 @@ enchant-values:
   wind_burst: 1200
 
 messages:
-  sold: "&6&lSell &r>> &aYou sold your items for &2{amount}&a!"
-  nothing: "&6&lSell &r>> &cThere is nothing to sell!"
-  unsellable: "&6&lSell &r>> &cYou can't sell &f{item} &c({reason})"
-  no-economy: "&6&lSell &r>> &cNo economy found. Install Vault + an economy plugin."
+  sold: "&d&lSell &r>> &aYou sold your items for &2{amount}&a!"
+  nothing: "&d&lSell &r>> &cThere is nothing to sell!"
+  unsellable: "&d&lSell &r>> &cYou can't sell &f{item} &c({reason})"
+  no-economy: "&d&lSell &r>> &cNo economy found. Install Vault + an economy plugin."
 
 # --------------------------------------------------------------------
 # Base prices (an item's price before enchantments / trims are added)
